@@ -11,7 +11,6 @@ def get_token_and_signature(channel):
     url = TOKEN_API.format(channel=channel)
     r = requests.get(url)
     txt = r.text
-    
     data = json.loads(txt)
     sig = data['sig']
     token = data['token']
